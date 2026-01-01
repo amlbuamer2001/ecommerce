@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
+import Image from "next/image";
 
 export default function CategorySwiper({ data }: any) {
   return (
@@ -20,7 +21,9 @@ export default function CategorySwiper({ data }: any) {
         {data.map((category: any) => (
           <SwiperSlide key={category._id}>
             <div>
-              <img
+              <Image
+                width={100}
+                height={100}
                 src={category.image}
                 alt={category.name}
                 className="w-full h-[150px] object-cover"
