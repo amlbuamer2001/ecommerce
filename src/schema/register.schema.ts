@@ -15,7 +15,7 @@ export const registerSchema = z
       .nonempty("Password is required")
       .min(6, "Password must be at least 6 characters long"),
     rePassword: z.string().nonempty("Please confirm your password"),
-    Phone: z
+    phone: z
       .string()
       .nonempty("Phone number is required")
       .regex(/^(2|\+2)?01[0251][0-9]{8}$/, "Phone number must be 10 digits"),

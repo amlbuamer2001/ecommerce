@@ -6,19 +6,18 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-  FormDescription,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { registerSchema } from "@/src/schema/register.schema";
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
-import { toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+
 export default function Register() {
+
   let router = useRouter();
   const form = useForm({
     defaultValues: {
@@ -126,7 +125,6 @@ export default function Register() {
             <Button type="submit">Register</Button>
           </form>
         </Form>
-        {/* Import the missing components at the top of your file */}
       </div>
     </>
   );
